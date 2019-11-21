@@ -1,3 +1,9 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Test</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <script type="text/javascript">
 var HashMap = (function() {
   var DEFAULT_SIZE = 16;
 
@@ -119,7 +125,9 @@ var HashMap = (function() {
       this._elementCount--; return entry; }, size: function() { return this._elementCount; }, values: function() { return new ValueCollection(this); } };
   return HashMap;
 })();
-var map = new HashMap();
+
+function codeAddress() {
+            var map = new HashMap();
 var COUNT = 500000;
 for (var i = 0; i < COUNT; ++i) map.put(i, 42);
 var result = 0;
@@ -133,3 +141,11 @@ if (result != 105000000) throw "Error: result = " + result;
 if (keySum != 124999750000) throw "Error: keySum = " + keySum;
 if (valueSum != 21000000) throw "Error: valueSum = " + valueSum;
 print("Done!")
+        }
+window.onload = codeAddress;
+        </script>
+    </head>
+    <body>
+    
+    </body>
+</html>
